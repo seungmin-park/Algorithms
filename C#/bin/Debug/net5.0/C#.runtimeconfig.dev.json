@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/home/tmdlas369/.dotnet/store/|arch|/|tfm|",
+      "/home/tmdlas369/.nuget/packages"
+    ]
+  }
+}

@@ -1,7 +1,7 @@
-package week6;
+package Java;
 
-public class studentsScore {
-	public static void main(String[] args) {
+public class test {
+    public static void main(String[] args) {
 		int[][] score = {{49, 80, 20, 100, 80},
 						{43, 60, 85, 30, 90},
 						{49, 82, 48, 50, 100}};
