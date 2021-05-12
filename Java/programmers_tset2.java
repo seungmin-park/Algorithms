@@ -1,8 +1,8 @@
-package week8;
+package Java;
 
 import java.util.Scanner;
 
-public class test {
+public class programmers_tset2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
@@ -14,5 +14,6 @@ public class test {
             System.out.println();
             count++;
         }
+        sc.close();
     }
 }

@@ -1,8 +1,6 @@
-package week8;
+package Java;
 
-import java.util.Scanner;
-
-public class test2 {
+public class contury_of_124 {
     public static void main(String[] args) {
         int x = 0;
         for(int n = 1; n <=20; n++){
