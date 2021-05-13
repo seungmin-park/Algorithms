@@ -1,24 +1,22 @@
 package Java;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.IOException; 
+import java.util.*;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        int x = Integer.parseInt(br.readLine());
-        String[] s;
-        for(int i =0; i< x; i++){
-            String temp = br.readLine();
-            s= temp.split(" ");
-            bw.write(Integer.parseInt(s[0]) + Integer.parseInt(s[1]) + "\n");
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        int max = -1;
+        int min = 1000001;
+        for(int i = 0; i <x; i++){
+            int y = sc.nextInt();
+            if(y > max){
+                max = y;
+            }else if(y < min){
+                min = y;
+            }
         }
-        bw.flush();
-        bw.close();
-        br.close();
+        System.out.printf("%d %d",min ,max);
+        sc.close();
     }
 }
