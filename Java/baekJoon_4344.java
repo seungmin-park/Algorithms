@@ -2,7 +2,7 @@ package Java;
 
 import java.io.*;
 
-public class Main {
+public class baekJoon_4344 {
 
 	public static void main(String[] args) throws IOException {
 		

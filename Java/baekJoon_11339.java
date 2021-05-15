@@ -2,7 +2,7 @@ package Java;
 
 import java.util.Scanner;
 import java.util.Arrays;
-public class baek_11339 {
+public class baekJoon_11339 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
