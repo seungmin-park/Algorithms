@@ -2,7 +2,7 @@ package Java;
 
 import java.io.*;
 
-public class Main {
+public class baekJoon_2941 {
 
 	public static void main(String[] args) throws IOException {
 		
@@ -11,8 +11,8 @@ public class Main {
 		String s = br.readLine();
 		String[] croAlpha = {"c=","c-","dz=","d-","lj","nj","s=","z="};
 		for(int i = 0; i < croAlpha.length; i++){
-			if(s.contains(croAlpha[i])){
-				s = s.replace(croAlpha[i], "A");
+			if(s.contains(croAlpha[i])){//크로아티아문자 포함여부 탐색
+				s = s.replace(croAlpha[i], "A");//포함할시 변경
 			}
 		}
 
