@@ -3,7 +3,7 @@ package Java;
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class StackCalculator {
 	static int precedence(char ch) {
         if (ch == '(') return 2;
         if (ch == '+' || ch == '-') return 1;
