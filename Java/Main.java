@@ -10,43 +10,40 @@ public class Main {
         else return 0;
     }
 
-	static double cal(String postfix){
-		double result = 0;
-		Stack<Double> test = new Stack<>();
-		for(char token : postfix.toCharArray()){
-			if('1' <= token && token <= '9'){
-				token -= 48;
-				test.push((double)token);
-			}
-			else{
-				if(token == '*'){
-					double x = test.pop();
-					double y = test.pop();
-					result = y* x;
-					test.push(result);
-				}
-				else if(token == '/'){
-					double x = test.pop();
-					double y = test.pop();
-					result = y/x;
-					test.push(result);
-				}
-				else if(token == '-'){
-					double x = test.pop();
-					double y = test.pop();
-					result = y-x;
-					test.push(result);
-				}
-				else if(token == '+'){
-					double x = test.pop();
-					double y = test.pop();
-					result = y+x;
-					test.push(result);
-				}
-			}
-		}
+	static double cal(String postfix) {
+        double result = 0;
+        Stack<Double> test = new Stack<>();
+        for (char token : postfix.toCharArray()) {
+            if ('1' <= token && token <= '9') {
+                token -= 48;
+                test.push((double) token);
+            } else {
+                if (token == '*') {
+                    double x = test.pop();
+                    double y = test.pop();
+                    result = y * x;
+                    test.push(result);
+                } else if (token == '/') {
+                    double x = test.pop();
+                    double y = test.pop();
+                    result = y / x;
+                    test.push(result);
+                } else if (token == '-') {
+                    double x = test.pop();
+                    double y = test.pop();
+                    result = y - x;
+                    test.push(result);
+                } else if (token == '+') {
+                    double x = test.pop();
+                    double y = test.pop();
+                    result = y + x;
+                    test.push(result);
+                }
+            }
+            System.out.println("스택상태 : "+ test + " 토큰상태 : "+ token + " 계산결과 : "+ result);
+        }
 		return result;
-	}
+    }
 	public static void main(String[] args) throws IOException {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
