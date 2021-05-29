@@ -51,7 +51,7 @@ public class StackCalculator {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		String s = br.readLine().trim();
+		String s = br.readLine().replaceAll(" ", "");
 		String postfix = "";
 		Stack<Character> oper = new Stack<>();
 		for(char infix : s.toCharArray()){
