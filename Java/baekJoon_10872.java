@@ -2,24 +2,22 @@ package Java;
 
 import java.io.*;
 
-public class Main {
+public class baekJoon_10872 {
 	public static void main(String[] args) throws IOException {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		int num = Integer.parseInt(br.readLine());
-		
-		for(int i = 0; i < num; i++){
-			for(int o=0;i>o;++o) {
-				bw.write(" ");
-			}
-			for(int j=num-i;j>0;--j) {
-				bw.write("*");			
-			}
-			bw.write("\n");
-		}
+		int n = Integer.parseInt(br.readLine());
+		bw.write(String.valueOf(fac(n)));
+        
 		bw.flush();
 		bw.close();
 		br.close();
+	}
+	static int fac(int N){
+		if(N == 0){
+			return 1;
+		}
+		return N * fac(N - 1);
 	}
 }
