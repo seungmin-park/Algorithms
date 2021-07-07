@@ -1,7 +1,5 @@
 package Java;
 
-import javax.xml.crypto.Data;
-
 class Node{
     int data;
     Node left;
