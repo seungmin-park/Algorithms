@@ -1,7 +1,7 @@
 package Java;
 
 import java.io.*;
-import java.util.Arrays;
+import java.util.LinkedList;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
@@ -9,23 +9,20 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		int repeat = Integer.parseInt(br.readLine());
-		int[] numbers = new int[repeat];
-		int sum = 0;
-		for(int i = 0; i< repeat; i++){
-			numbers[i] = Integer.parseInt(br.readLine());
+		int result = 0;
+		LinkedList<Integer> jamin = new LinkedList<>();
+		for(int i = 0; i < repeat; i++){
+			int num = Integer.parseInt(br.readLine());
+			if(num != 0){
+				jamin.add(num);
+			}else{
+				jamin.removeLast();
+			}
 		}
-
-		Arrays.sort(numbers);
-
-		for(int x : numbers){
-			sum += x;
+		for(int x : jamin){
+			result += x;
 		}
-		bw.write(String.valueOf(sum/repeat));
-		bw.write("\n");
-		bw.write(String.valueOf((numbers[repeat/2])));
-		bw.write("\n");
-		bw.write("\n");
-		bw.write(String.valueOf(numbers[repeat-1] -numbers[0]));
+		bw.write(String.valueOf(result));
 		bw.flush();
 		bw.close();
 		br.close();
