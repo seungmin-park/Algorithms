@@ -1,7 +1,7 @@
 package Java;
 
 import java.io.*;
-import java.util.LinkedList;
+import java.util.Arrays;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
@@ -9,20 +9,13 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		int repeat = Integer.parseInt(br.readLine());
-		int result = 0;
-		LinkedList<Integer> jamin = new LinkedList<>();
-		for(int i = 0; i < repeat; i++){
-			int num = Integer.parseInt(br.readLine());
-			if(num != 0){
-				jamin.add(num);
-			}else{
-				jamin.removeLast();
-			}
+		int sum = 0;
+		for(int i = 0; i < repeat; i ++){
+			String[] s = br.readLine().split(" ");
+			Arrays.sort(s);
+			sum += Integer.parseInt(s[s.length-1]);
 		}
-		for(int x : jamin){
-			result += x;
-		}
-		bw.write(String.valueOf(result));
+		bw.write(String.valueOf(sum));
 		bw.flush();
 		bw.close();
 		br.close();
