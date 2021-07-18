@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.LinkedList;
 import java.util.ListIterator;
 
-public class Main {
+public class baekJoon_1406 {
 	static int n;
 	static int m;
 	static int[][] arr;
