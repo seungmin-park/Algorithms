@@ -1,17 +1,25 @@
 package Java;
 
 import java.io.*;
-import java.math.BigInteger;
+import java.util.Arrays;
+
 
 public class Main {
 	public static void main(String[] args) throws IOException {
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String[] countAndRepeat = br.readLine().split(" ");
-		BigInteger numA = new BigInteger(countAndRepeat[0]);
-		BigInteger numB = new BigInteger(countAndRepeat[1]);
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		int[] buggerPrice = new int[3];
+		int[] drinkPrice = new int[2];
+        for(int i = 0; i < 3; i++){
+			buggerPrice[i] = Integer.parseInt(br.readLine());
+		}
+		for(int i = 0; i < 2; i++){
+			drinkPrice[i] = Integer.parseInt(br.readLine());
+		}
+		Arrays.sort(buggerPrice);
+		Arrays.sort(drinkPrice);
+        bw.write(String.valueOf(buggerPrice[0]+drinkPrice[0]-50));     
 
-		bw.write(String.valueOf(numA.add(numB)));
 		bw.flush();
 		bw.close();
 		br.close();
